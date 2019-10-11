@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DynamicSeekBar">
+
+    <attr name="color_mark" format="integer"/>
+    <attr name="color_progress" format="integer"/>
+    <attr name="color_way" format="integer"/>
+    <attr name="color_background" format="integer"/>
+    <attr name="color_content" format="integer"/>
+    <attr name="color_bord_mark" format="integer"/>
+    <attr name="color_bord_background" format="integer"/>
+
+
+
+    <attr name="min_value" format="integer"/>
+    <attr name="max_value" format="integer"/>
+    <attr name="progress_value" format="integer"/>
+    <attr name="text_size" format="integer"/>
+
+    <attr name="drw_mark" format="string"/>
+    <attr name="drw_b1" format="string"/>
+    <attr name="drw_b2" format="string"/>
+
+    <attr name="gravity_text" format="string"/>
+    <attr name="orientation" format="string"/>
+    <attr name="rounded" format="string"/>
+    <attr name="direct" format="string"/>
+
+    <attr name="visible_text" format="boolean"/>
+    <attr name="visible_buttons" format="boolean"/>
+    <attr name="visible_background" format="boolean"/>
+    <attr name="revers_text" format="boolean"/>
+    <attr name="visible_bord_mark" format="boolean"/>
+    <attr name="visible_bord_buttons" format="boolean"/>
+    <attr name="visible_bord_background" format="boolean"/>
+
+
+    <attr name="radius_way" format="float"/>
+    <attr name="step_value" format="float"/>
+    <attr name="width_bord" format="float"/>
+
+
+
+
+    </declare-styleable>
+
+</resources>
