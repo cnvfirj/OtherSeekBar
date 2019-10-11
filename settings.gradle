@@ -1,0 +1,2 @@
+include ':app', ':dynamikseekbar'
+rootProject.name='Dynamik Seek Bar'
