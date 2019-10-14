@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
 ext {
-    bintrayRepo = 'maven'
+    bintrayRepo = 'Public'
     bintrayName = 'dynamikseekbar'
 
     publishedGroupId = 'com.github.cnvfirj'
