@@ -1,4 +1,27 @@
 apply plugin: 'com.android.library'
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'mutablebitmap'
+
+    publishedGroupId = 'com.github.cnvfirj'
+    libraryName = 'DynamikSeekBar'
+    artifact = 'dynamikseekbar'
+
+    libraryDescription = 'Vertical, reverse sic bar with text.'
+
+    siteUrl = 'https://github.com/cnvfirj/OtherSeekBar'
+    gitUrl = 'https://github.com/cnvfirj/OtherSeekBar.git'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'cnvfirj'
+    developerName = 'Ihor Khomenko'
+    developerEmail = 'cnvfirj@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 29
@@ -32,3 +55,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
