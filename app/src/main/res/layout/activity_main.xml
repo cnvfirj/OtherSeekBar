@@ -1,18 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal"
+        android:padding="5dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.example.dynamikseekbar.DynamicSeekBar
+            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:layout_height="300dp"
+            app:orientation="vertical"
+            app:visible_text="true"
+            app:progress_value="20"
+            app:radius_way="20"
+            app:color_progress="@color/color1"
+            app:color_mark="@color/color1"
+            app:color_way="@color/color4"
+            android:id="@+id/seek1"/>
+
+        <com.example.dynamikseekbar.DynamicSeekBar
+            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:layout_height="300dp"
+            app:orientation="vertical"
+            app:visible_text="true"
+            app:text_size="15"
+            app:max_value="1500"
+            app:direct="back"
+            app:progress_value="200"
+            app:radius_way="20"
+            app:color_progress="@color/color1"
+            app:color_mark="@color/color1"
+            app:color_way="@color/color4"
+            app:visible_buttons="true"
+            android:id="@+id/seek2"/>
+
+        <com.example.dynamikseekbar.DynamicSeekBar
+            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:layout_height="300dp"
+            app:orientation="vertical"
+            app:radius_way="50"
+            app:min_value="26"
+            app:drw_mark="@drawable/ic_example"
+            app:color_progress="@color/colorAccent"
+            app:color_mark="@color/colorAccent"
+            app:color_way="@color/colorPrimary"/>
+
+        <com.example.dynamikseekbar.DynamicSeekBar
+            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:layout_height="300dp"
+            app:orientation="vertical"
+            app:visible_text="true"
+            app:radius_way="15"
+            app:rounded="rect"
+            app:visible_buttons="true"
+            app:drw_b1="@drawable/ic_minus"
+            app:drw_b2="@drawable/ic_plus"
+            app:visible_background="true"
+            app:visible_bord_background="true"
+            app:color_bord_background="@color/colorPrimary"/>
+
+        <com.example.dynamikseekbar.DynamicSeekBar
+            android:layout_margin="10dp"
+            android:layout_width="50dp"
+            android:layout_height="300dp"
+            app:orientation="vertical"
+            app:visible_text="true"
+            app:radius_way="15"
+            app:revers_text="true"
+            app:direct="back"
+            app:visible_buttons="true"
+            app:drw_b1="@drawable/ic_minus"
+            app:drw_b2="@drawable/ic_plus"/>
+
+    </LinearLayout>
+
+    <com.example.dynamikseekbar.DynamicSeekBar
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:max_value="80"
+        app:direct="back"
+        app:rounded="rect"
+        app:revers_text="true"
+        app:visible_text="true"
+        app:visible_buttons="true"
+        app:drw_b1="@drawable/ic_plus"
+        app:drw_b2="@drawable/ic_minus"
+        app:color_mark="@color/color5"
+        app:visible_bord_background="true"
+        app:color_bord_background="@color/colorPrimary"
+        app:width_bord="5"/>
+
+    <com.example.dynamikseekbar.DynamicSeekBar
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:direct="back"
+        app:rounded="rect"
+        app:revers_text="true"
+        app:visible_text="true"
+        app:text_size="9"
+        app:drw_mark="@drawable/ic_example"
+        app:color_content="@color/colorPrimary"/>
+
+
+    <com.example.dynamikseekbar.DynamicSeekBar
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:orientation="horizontal"
+        app:visible_text="true"
+        app:text_size="15"
+        app:progress_value="60"
+        app:radius_way="20"
+        app:color_progress="@color/color1"
+        app:color_mark="@color/color4"
+        app:color_way="@color/color4"/>
+
+    <com.example.dynamikseekbar.DynamicSeekBar
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:visible_text="true"
+        app:text_size="15"
+        app:max_value="1500"
+        app:progress_value="200"
+        app:radius_way="20"
+        app:color_progress="@color/color1"
+        app:color_mark="@color/color4"
+        app:color_way="@color/color4"
+        app:direct="back"
+        app:visible_background="true"
+        app:width_bord="5"
+        app:visible_bord_background="true"
+        app:visible_bord_mark="true"
+        app:color_bord_mark="@color/color1"
+        app:color_bord_background="@color/color4"/>
+
+
+
+
+
+</LinearLayout>

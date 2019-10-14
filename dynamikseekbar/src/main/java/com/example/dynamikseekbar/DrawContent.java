@@ -15,6 +15,8 @@ public class DrawContent {
 
     private Drawable dButton1,dButton2,dMark;
 
+    private boolean dVectorButton1, dVectorButton2, dVectorMark;
+
     private Paint dPaint;
 
     private String dGravity;
@@ -164,14 +166,13 @@ public class DrawContent {
 
     }
     private void drawDrawable(Drawable d, Canvas canvas, RectF r){
-
          if(d!=null){
            canvas.save();
            canvas.clipPath(clipField(r));
            d.setBounds(rect(r));
            d.draw(canvas);
            canvas.restore();
-         }
+                    }
     }
 
     private void drawText(int content, Canvas canvas, RectF r){

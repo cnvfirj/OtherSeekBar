@@ -4,6 +4,8 @@ import android.graphics.PointF;
 import android.graphics.RectF;
 import android.view.MotionEvent;
 
+import androidx.annotation.NonNull;
+
 public class TouchEvent {
 
     public static final int NON_TOUCH = 0;
@@ -20,7 +22,7 @@ public class TouchEvent {
         return new TouchEvent(fields);
     }
 
-    public TouchEvent(CreateFields fields) {
+    public TouchEvent(@NonNull CreateFields fields) {
         this.fields = fields;
     }
 

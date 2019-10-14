@@ -52,6 +52,7 @@ public class CreateFields {
         return this;
     }
 
+
     public CreateFields direct(String direct){
         this.direct = direct;
         return this;
@@ -85,7 +86,7 @@ public class CreateFields {
     public RectF getProgress(){
         return progress;
     }
-    private void createProgress(float position){
+    protected void createProgress(float position){
         if(direct.equals(DynamicSeekBar.DIRECT_BACK)){
             if(orientation.equals(ORIENTATION_VERTICAL)){
                 progress.set(way.left,position,way.right,way.bottom);
@@ -102,7 +103,7 @@ public class CreateFields {
 
     }
 
-    private void createMark(float position){
+    protected void createMark(float position){
         if(direct.equals(DynamicSeekBar.DIRECT_BACK)){
             float loc = (getLength()-indent())-(getLength()-indent()-position);
             if(orientation.equals(ORIENTATION_VERTICAL)){
@@ -120,7 +121,7 @@ public class CreateFields {
 
     }
 
-    private void createButton1(){
+    protected void createButton1(){
         if(visibleButtons){
                 if(orientation.equals(ORIENTATION_VERTICAL)){
                     button1.set(0,0,getRound(),getRound());
@@ -132,7 +133,7 @@ public class CreateFields {
         }
     }
 
-    private void createButton2(){
+    protected void createButton2(){
         if(visibleButtons){
                 if(orientation.equals(ORIENTATION_VERTICAL)){
                     button2.set(0,getLength()-getRound(),getRound(),getLength());
@@ -144,7 +145,7 @@ public class CreateFields {
         }
     }
 
-    private void createWay(){
+    protected void createWay(){
         if(orientation.equals(ORIENTATION_VERTICAL)){
             way.set(getCenterRound()-radiusWay/2,(indent()),getCenterRound()+radiusWay/2,getLength()-(indent()));
         }else {
@@ -157,8 +158,6 @@ public class CreateFields {
     private void createBackground(){
         background.set(0,0,width,height);
     }
-
-
 
     private float getCenterRound(){
         return getRound()/2;

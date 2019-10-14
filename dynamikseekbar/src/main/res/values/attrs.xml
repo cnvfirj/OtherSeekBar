@@ -40,8 +40,6 @@
     <attr name="width_bord" format="float"/>
 
 
-
-
     </declare-styleable>
 
 </resources>

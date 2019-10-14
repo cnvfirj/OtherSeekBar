@@ -1,10 +1,13 @@
 package com.example.dynamikseekbar;
 
+import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.RectF;
+
+import androidx.annotation.NonNull;
 
 import static com.example.dynamikseekbar.DynamicSeekBar.ROUND_CIRCLE;
 import static com.example.dynamikseekbar.DynamicSeekBar.ROUND_RECT;
@@ -17,9 +20,9 @@ public class DrawFields {
 
     private RectF dWayProgress;
 
-    private String dRoundMark;
+    protected String dRoundMark;
 
-    private CreateFields dFields;
+    protected CreateFieldsAndBords dFields;
 
     private boolean dVisibleBackground;
 
@@ -31,14 +34,14 @@ public class DrawFields {
 
     protected int dColorProgress;
 
-    public DrawFields(CreateFields fields) {
+    public DrawFields(@NonNull CreateFieldsAndBords fields) {
         dPaintSeek = new Paint(Paint.ANTI_ALIAS_FLAG);
         dClipWay = new Path();
         dWayProgress = new RectF();
         dRoundMark = ROUND_CIRCLE;
-        dColorMark = Color.MAGENTA;
-        dColorProgress = Color.MAGENTA;
-        dColorWay = Color.BLUE;
+        dColorMark = Color.YELLOW;
+        dColorProgress = Color.YELLOW;
+        dColorWay = Color.GREEN;
         dColorBackground = Color.LTGRAY;
         this.dFields = fields;
     }
@@ -55,11 +58,13 @@ public class DrawFields {
 
     public void setColorMark(int dColorMark) {
         this.dColorMark = dColorMark;
+
     }
 
     public void setColorBackground(int dColorBackground) {
         this.dColorBackground = dColorBackground;
     }
+
 
     public void setColorWay(int dColorWay) {
         this.dColorWay = dColorWay;
@@ -90,8 +95,7 @@ public class DrawFields {
     }
 
     public void drawMark(Canvas canvas,  long location){
-        if(dFields==null)drawError(canvas);
-        else {
+
             dPaintSeek.setStyle(Paint.Style.FILL);
             dPaintSeek.setColor(dColorMark);
             if (dRoundMark.equals(ROUND_CIRCLE)) {
@@ -99,12 +103,9 @@ public class DrawFields {
             } else if (dRoundMark.equals(ROUND_RECT)) {
                 canvas.drawRect(dFields.mark(location), dPaintSeek);
             }
-        }
-    }
+      }
 
     public void drawWay(Canvas canvas){
-        if(dFields==null)drawError(canvas);
-        else {
             dPaintSeek.setStyle(Paint.Style.FILL);
             dPaintSeek.setColor(dColorWay);
             if (dRoundMark.equals(ROUND_CIRCLE)) {
@@ -112,12 +113,10 @@ public class DrawFields {
             } else if (dRoundMark.equals(ROUND_RECT)) {
                 canvas.drawRect(correctRect(dFields.getWay()), dPaintSeek);
             }
-        }
     }
 
     public void drawProgress(Canvas canvas, float location){
-        if(dFields==null)drawError(canvas);
-        else {
+
             dPaintSeek.setStyle(Paint.Style.FILL);
             dPaintSeek.setColor(dColorProgress);
             canvas.save();
@@ -129,7 +128,7 @@ public class DrawFields {
                 canvas.drawRect(correctRect(dFields.progress(location)), dPaintSeek);
             }
             canvas.restore();
-        }
+
     }
 
     public void drawError(Canvas canvas){
@@ -138,18 +137,14 @@ public class DrawFields {
     }
 
     public void drawBackground(Canvas canvas ){
-        if(dFields==null)drawError(canvas);
-        else {
             if (dVisibleBackground) {
                 dPaintSeek.setStyle(Paint.Style.FILL);
                 dPaintSeek.setColor(dColorBackground);
             } else dPaintSeek.setColor(Color.TRANSPARENT);
             drawRect(canvas, dFields.getBackground());
-        }
+
     }
     public void drawButtons(Canvas canvas){
-        if(dFields==null)drawError(canvas);
-        else {
             if (!dFields.isVisibleButtons()) return;
             dPaintSeek.setStyle(Paint.Style.FILL);
             dPaintSeek.setColor(dColorMark);
@@ -160,9 +155,7 @@ public class DrawFields {
             } else if (dRoundMark.equals(ROUND_RECT)) {
                 canvas.drawRect(dFields.getButton1(), dPaintSeek);
                 canvas.drawRect(dFields.getButton2(), dPaintSeek);
-
             }
-        }
     }
 
     protected String round() {

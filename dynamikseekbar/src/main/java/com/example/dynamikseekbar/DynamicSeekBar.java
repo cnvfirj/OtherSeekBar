@@ -30,7 +30,7 @@ public class DynamicSeekBar extends ProgressBar {
 
     private OnSeekBarChangeListener dListener;
 
-    private CreateFields dFields;
+    private CreateFieldsAndBords dFields;
 
     private TouchEvent dTouch;
 
@@ -214,6 +214,7 @@ public class DynamicSeekBar extends ProgressBar {
 
 
     public void setWidthBord(float width){
+        dFields.widthBord(width);
       dDrawFields.width(width);
     }
 
@@ -222,6 +223,7 @@ public class DynamicSeekBar extends ProgressBar {
     }
 
     public void visibleBordBackground(boolean visible){
+        dFields.visibleBord(visible);
         dDrawFields.setVisibleBordBackground(visible);
     }
 
@@ -594,9 +596,10 @@ public class DynamicSeekBar extends ProgressBar {
     }
 
     private void initDefaultVar(){
-        dFields = CreateFields.get();
+        dFields = CreateFieldsAndBords.get();
         dTouch = new TouchEvent(dFields);
         dDrawFields = new DrawFieldsAndBords(dFields);
+        dDrawFields.initDefColors(getContext());
         dDrawContent = new DrawContent(dFields);
         dFields.buttons(false).radiusWay(10);
         dVisibleBackground = true;
