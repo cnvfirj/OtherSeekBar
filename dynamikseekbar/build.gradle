@@ -7,7 +7,7 @@ ext {
     libraryName = 'DynamikSeekBar'
     artifact = 'dynamikseekbar'
 
-    libraryDescription = 'Vertical, reverse sic bar with text.'
+    libraryDescription = 'Vertical, reverse SeecBar with text.'
 
     siteUrl = 'https://github.com/cnvfirj/OtherSeekBar'
     gitUrl = 'https://github.com/cnvfirj/OtherSeekBar.git'
