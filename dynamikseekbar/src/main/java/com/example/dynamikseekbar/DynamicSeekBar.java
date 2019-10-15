@@ -160,7 +160,8 @@ public class DynamicSeekBar extends ProgressBar {
     }
 
     private void actionUp(MotionEvent event, int touch){
-        if (touch == TouchEvent.TOUCH_WAY || touch == TouchEvent.TOUCH_MARK) correctPosition();
+        if (touch == TouchEvent.TOUCH_WAY || touch == TouchEvent.TOUCH_MARK||
+                touch==TouchEvent.TOUCH_BUTTON_1||touch==TouchEvent.TOUCH_BUTTON_2)correctPosition();
     }
 
     private void actionMove(MotionEvent event, int touch){

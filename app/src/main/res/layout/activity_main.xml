@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:id="@+id/text"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +30,8 @@
             app:color_progress="@color/color1"
             app:color_mark="@color/color1"
             app:color_way="@color/color4"
+            app:visible_buttons="true"
+            app:revers_text="true"
             android:id="@+id/seek1"/>
 
         <com.example.dynamikseekbar.DynamicSeekBar
@@ -101,19 +109,6 @@
         app:visible_bord_background="true"
         app:color_bord_background="@color/colorPrimary"
         app:width_bord="5"/>
-
-    <com.example.dynamikseekbar.DynamicSeekBar
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        app:direct="back"
-        app:rounded="rect"
-        app:revers_text="true"
-        app:visible_text="true"
-        app:text_size="9"
-        app:drw_mark="@drawable/ic_example"
-        app:color_content="@color/colorPrimary"/>
-
 
     <com.example.dynamikseekbar.DynamicSeekBar
         android:layout_margin="10dp"
