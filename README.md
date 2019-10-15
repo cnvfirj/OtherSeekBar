@@ -6,7 +6,7 @@ Vertical, with progress and reverse SeekBar. Adding adjustment buttons.
 
         dependencies {
            implementation 'com.github.cnvfirj:dynamikseekbar:0.0.1'
-     }
+        }
      
   - Step 2.
   
