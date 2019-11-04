@@ -39,7 +39,7 @@ public class DrawContent {
     public DrawContent(CreateFields fields) {
         this.dFields = fields;
         dColorContent = Color.WHITE;
-        dTextSize = 50;
+        dTextSize = 5;
         dPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         dPaint.setTextAlign(Paint.Align.CENTER);
         dPaint.setColor(dColorContent);

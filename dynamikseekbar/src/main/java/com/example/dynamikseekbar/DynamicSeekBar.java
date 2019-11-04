@@ -135,21 +135,23 @@ public class DynamicSeekBar extends ProgressBar {
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-               int touch = dTouch.touch(event);
+        if(isEnabled()) {
+            int touch = dTouch.touch(event);
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                actionDown(event,touch);
+                actionDown(event, touch);
 
             } else if (event.getAction() == MotionEvent.ACTION_UP) {
-                actionUp(event,touch);
+                actionUp(event, touch);
                 dDrawContent.reversText(false);
 
             } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
-                actionMove(event,touch);
+                actionMove(event, touch);
 
             }
 
-        invalidate();
-        return true;
+            invalidate();
+            return true;
+        }return super.onTouchEvent(event);
     }
 
     private void actionDown(MotionEvent event, int touch){
