@@ -1,6 +1,6 @@
 # OtherSeekBar
 
-![Image alt](https://github.com/cnvfirj/OtherSeekBar/issues/1)
+   ![Image alt](https://github.com/cnvfirj/OtherSeekBar/issues/1)
 
 Vertical, with progress and reverse SeekBar. Adding adjustment buttons.
 
