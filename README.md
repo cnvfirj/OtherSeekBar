@@ -47,21 +47,18 @@ Vertical, with progress and reverse SeekBar. Adding adjustment buttons.
    2. default orientation is «horizontal»:
    
            app:orientation="vertical"
-           app:orientation="horizontal"
            setOrientation(DynamicSeekBar.ORIENTATION_HORIZONTAL);
            setOrientation(DynamicSeekBar.ORIENTATION_VERTICAL);
            
    3. the default shape is «circle»:
    
            app:rounded="rect"
-           app:rounded="circle"
            setRound(DynamicSeekBar.ROUND_CIRCLE);
            setRound(DynamicSeekBar.ROUND_RECT);
            
    4. default direction of progress «stright»:
    
           app:direct="back"
-          app:direct="straigth"
           setDirect(DynamicSeekBar.DIRECT_BACK);
           setDirect(DynamicSeekBar.DIRECT_STRAIGHT);
           
