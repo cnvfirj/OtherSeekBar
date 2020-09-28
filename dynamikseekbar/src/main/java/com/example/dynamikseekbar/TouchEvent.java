@@ -6,6 +6,8 @@ import android.view.MotionEvent;
 
 import androidx.annotation.NonNull;
 
+import javax.inject.Inject;
+
 public class TouchEvent {
 
     public static final int NON_TOUCH = 0;
@@ -18,11 +20,9 @@ public class TouchEvent {
 
     private CreateFields fields;
 
-    public static TouchEvent get(CreateFields fields){
-        return new TouchEvent(fields);
-    }
 
-    public TouchEvent(@NonNull CreateFields fields) {
+    @Inject
+    public TouchEvent(@NonNull CreateFieldsAndBords fields) {
         this.fields = fields;
     }
 

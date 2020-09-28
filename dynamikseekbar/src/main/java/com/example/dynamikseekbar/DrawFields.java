@@ -9,6 +9,8 @@ import android.graphics.RectF;
 
 import androidx.annotation.NonNull;
 
+import javax.inject.Inject;
+
 import static com.example.dynamikseekbar.DynamicSeekBar.ROUND_CIRCLE;
 import static com.example.dynamikseekbar.DynamicSeekBar.ROUND_RECT;
 
@@ -34,6 +36,7 @@ public class DrawFields {
 
     protected int dColorProgress;
 
+    @Inject
     public DrawFields(@NonNull CreateFieldsAndBords fields) {
         dPaintSeek = new Paint(Paint.ANTI_ALIAS_FLAG);
         dClipWay = new Path();

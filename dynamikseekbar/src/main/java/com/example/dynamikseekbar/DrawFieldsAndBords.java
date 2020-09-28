@@ -5,6 +5,8 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 
+import javax.inject.Inject;
+
 import static com.example.dynamikseekbar.DynamicSeekBar.ROUND_CIRCLE;
 import static com.example.dynamikseekbar.DynamicSeekBar.ROUND_RECT;
 
@@ -22,7 +24,7 @@ public class DrawFieldsAndBords extends DrawFields {
 
     private int dColorBordMark;
 
-
+    @Inject
     public DrawFieldsAndBords(CreateFieldsAndBords fields) {
         super(fields);
         dWidthBord = dFields.getBord();

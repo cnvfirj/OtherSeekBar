@@ -8,12 +8,14 @@ public class CreateFieldsAndBords extends CreateFields{
 
     private boolean visibleBord;
 
-    private CreateFieldsAndBords() {
-        bord = 5;
+    public static CreateFieldsAndBords get(){
+        return new CreateFieldsAndBords(new RectF(),new RectF(),new RectF(),new RectF(),new RectF(),new RectF());
     }
 
-    public static CreateFieldsAndBords get(){
-        return new CreateFieldsAndBords();
+
+    public CreateFieldsAndBords(RectF mark, RectF button1, RectF button2, RectF background, RectF way, RectF progress) {
+        super(mark, button1, button2, background, way, progress);
+        bord = 5;
     }
 
     public CreateFieldsAndBords visibleBord(boolean visible){

@@ -32,7 +32,8 @@
             app:color_way="@color/color4"
             app:visible_buttons="true"
             app:revers_text="true"
-            android:id="@+id/seek1"/>
+            android:id="@+id/seek1"
+            app:visible_bord_background="true"/>
 
         <com.example.dynamikseekbar.DynamicSeekBar
             android:layout_margin="10dp"
@@ -102,7 +103,7 @@
         app:rounded="rect"
         app:revers_text="true"
         app:visible_text="true"
-        app:visible_buttons="true"
+        app:visible_buttons="false"
         app:drw_b1="@drawable/ic_plus"
         app:drw_b2="@drawable/ic_minus"
         app:color_mark="@color/color5"
@@ -110,18 +111,19 @@
         app:color_bord_background="@color/colorPrimary"
         app:width_bord="5"/>
 
-    <com.example.dynamikseekbar.DynamicSeekBar
-        android:layout_margin="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:orientation="horizontal"
-        app:visible_text="true"
-        app:text_size="15"
-        app:progress_value="60"
-        app:radius_way="20"
-        app:color_progress="@color/color1"
-        app:color_mark="@color/color4"
-        app:color_way="@color/color4"/>
+<!--    <com.example.dynamikseekbar.DynamicSeekBar-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        app:orientation="horizontal"-->
+<!--        app:visible_text="true"-->
+<!--        app:text_size="15"-->
+<!--        app:progress_value="60"-->
+<!--        app:radius_way="20"-->
+<!--        app:color_progress="@color/color1"-->
+<!--        app:color_mark="@color/color4"-->
+<!--        app:color_way="@color/color4"-->
+<!--        app:visible_buttons="true"/>-->
 
     <com.example.dynamikseekbar.DynamicSeekBar
         android:layout_margin="10dp"
@@ -136,7 +138,6 @@
         app:color_mark="@color/color4"
         app:color_way="@color/color4"
         app:direct="back"
-        app:visible_background="true"
         app:width_bord="5"
         app:visible_bord_background="true"
         app:visible_bord_mark="true"

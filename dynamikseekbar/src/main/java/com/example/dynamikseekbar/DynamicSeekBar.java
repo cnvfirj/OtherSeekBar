@@ -12,6 +12,9 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ProgressBar;
 
+import com.example.dynamikseekbar.dagger.AllComponents;
+import com.example.dynamikseekbar.dagger.DaggerAllComponents;
+
 public class DynamicSeekBar extends ProgressBar {
 
     public static final String GRAVITY_TOP = "top";
@@ -58,6 +61,7 @@ public class DynamicSeekBar extends ProgressBar {
 
     public DynamicSeekBar(Context context) {
         super(context);
+
         initDefaultVar();
     }
 
@@ -599,11 +603,16 @@ public class DynamicSeekBar extends ProgressBar {
     }
 
     private void initDefaultVar(){
-        dFields = CreateFieldsAndBords.get();
-        dTouch = new TouchEvent(dFields);
-        dDrawFields = new DrawFieldsAndBords(dFields);
+        AllComponents components = DaggerAllComponents.builder().build();
+//        dFields = CreateFieldsAndBords.get();
+        dFields = components.fields();
+//        dTouch = new TouchEvent(dFields);
+        dTouch = components.touch();
+//        dDrawFields = new DrawFieldsAndBords(dFields);
+        dDrawFields = components.drawFields();
         dDrawFields.initDefColors(getContext());
-        dDrawContent = new DrawContent(dFields);
+//        dDrawContent = new DrawContent(dFields);
+        dDrawContent = components.drawContent();
         dFields.buttons(false).radiusWay(10);
         dVisibleBackground = true;
         dRoundMarc = ROUND_CIRCLE;

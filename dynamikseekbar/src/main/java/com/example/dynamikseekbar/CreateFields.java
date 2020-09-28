@@ -41,6 +41,18 @@ public class CreateFields {
         radiusWay = 5;
     }
 
+    public CreateFields(RectF mark, RectF button1, RectF button2, RectF background, RectF way, RectF progress) {
+        this.mark = mark;
+        this.button1 = button1;
+        this.button2 = button2;
+        this.background = background;
+        this.way = way;
+        this.progress = progress;
+        direct = DynamicSeekBar.DIRECT_STRAIGHT;
+        orientation = ORIENTATION_HORIZONTAL;
+        visibleButtons = false;
+        radiusWay = 5;
+    }
 
     public static CreateFields get(){
         return new CreateFields();

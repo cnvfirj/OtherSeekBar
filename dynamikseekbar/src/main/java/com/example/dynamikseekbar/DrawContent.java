@@ -9,6 +9,8 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 
+import javax.inject.Inject;
+
 public class DrawContent {
 
     private CreateFields dFields;
@@ -36,7 +38,8 @@ public class DrawContent {
     private Path dText;
 
 
-    public DrawContent(CreateFields fields) {
+    @Inject
+    public DrawContent(CreateFieldsAndBords fields) {
         this.dFields = fields;
         dColorContent = Color.WHITE;
         dTextSize = 5;
